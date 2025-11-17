@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESP32 3D Model</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Your CSS here -->
+</head>
+<body>
+    <div id="container"></div>
+    <div id="controls">
+    </div>
+    <script src="main.js"></script>
+    <script>
+        // Initialize the ESP32 viewer when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const esp32Viewer = createESP32Viewer('container');
+            
+            // Optional: expose viewer API to global scope for debugging
+            window.esp32Viewer = esp32Viewer;
+        });
+    </script>
+</body>
+</html>
